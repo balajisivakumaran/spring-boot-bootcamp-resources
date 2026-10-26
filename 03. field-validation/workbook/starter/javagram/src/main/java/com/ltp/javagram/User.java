@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+@UserValidation
 public class User {
 
     @NotBlank(message = "First name cannot be blank")
