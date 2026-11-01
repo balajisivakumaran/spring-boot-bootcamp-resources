@@ -1,8 +1,10 @@
-package com.ltp.gradesubmission;
+package com.ltp.gradesubmission.model;
 
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
+
+import com.ltp.gradesubmission.validation.Score;
 
 public class Grade {
 
@@ -13,7 +15,6 @@ public class Grade {
     @Score(message = "Score must be a letter grade")
     private String score;
     private String id;
-
 
     public Grade() {
         this.id = UUID.randomUUID().toString();
@@ -43,7 +44,6 @@ public class Grade {
         this.score = score;
     }
 
-
     public String getId() {
         return this.id;
     }
@@ -53,3 +53,4 @@ public class Grade {
     }
 
 }
+
